@@ -2,6 +2,7 @@ import React from "react";
 import "./Result.css";
 import GamePadIcon from '../img/Icon-awesome-gamepad.svg';
 import PersonIcon from '../img/Icon-material-person.svg';
+import iconOpenReload from '../img/Icon-open-reload.svg';
 import {GetDataFromLocal} from '../LocalStorage/SetLocalStorageData'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,6 +17,8 @@ export default function Game(props) {
   
     const difficultyFactorNew = parseFloat(GetDataFromLocal('difficultyFactor'));
     const score = parseFloat(GetDataFromLocal('score'));
+    // const scoreList = parseFloat(GetDataFromLocal('scoreList'));
+    // const maxScore = Math.max(...scoreList);
 
    function getLevel(difficultyFactorNew){
       
@@ -35,11 +38,18 @@ export default function Game(props) {
     window.location.href="/";
   }
 
+  function playAgain() {
+
+    window.location.href="/game";
+  }
+
+  
+
     return (
       <div className="container-fluid BackgroundStyle">
         <div className="row">
           <div className="col-sm-3">
-            <div className="headText">
+            <div className="headText pt-30">
               <img src={PersonIcon} alt=""/>
               <span className="pl-3">NAME: {GetDataFromLocal('playerName').toUpperCase()}</span>
             </div>
@@ -49,19 +59,23 @@ export default function Game(props) {
             </div>
            
             <div>
-              <button className="headText button pt-30" onClick={toggle}>QUIT</button>
+              <button className="headText button pt-450" onClick={toggle}>QUIT</button>
             </div>
             
           </div>
           <div className="col-sm-6 position-relative pt-30">
             
               <div className="score-game">SCORE: GAME 5</div>
-              <div className="score-game">{score}</div>
+              <div className="score-game score-text">{score}</div>
+              {/* <div className="score-game score-text">{score > maxScore ? "New High Score": "Try again to achieve new highest score"}</div> */}
+              <div className="button" onClick={playAgain}><img src={iconOpenReload} alt=">>" width="40px"/> PLAY AGAIN</div>
+
+              
             
           </div>
           <div className="col-sm-3">
               <div>
-                <span className="headText">fast fingers</span>
+                <div className="headText pt-30"><strong>fast fingers</strong></div>
               </div>
               
           </div>

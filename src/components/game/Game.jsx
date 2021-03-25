@@ -3,12 +3,12 @@ import "./Game.css";
 import GamePadIcon from '../img/Icon-awesome-gamepad.svg';
 import PersonIcon from '../img/Icon-material-person.svg';
 import TimerControl from '../img/timerControl.svg';
-import {GetDataFromLocal, SetDataToLocal} from '../LocalStorage/SetLocalStorageData'
+import {GetDataFromLocal, SetDataToLocal, AddToLocalStorageArray} from '../LocalStorage/SetLocalStorageData'
 import {getRandomWordFromDictionary} from '../dictionary/Dictionary';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-export default function Game(props) {
+export default function Game() {
 
   if(GetDataFromLocal('playerName')===""){
     alert("This page is not directly accessible");
@@ -20,7 +20,6 @@ export default function Game(props) {
   
     const [userinput, setUserinput] = useState("");
     
-    
     const [mSeconds, setMSeconds] = useState(100);
     const [isActive, setIsActive] = useState(true);
     const [scoreTimeSec, setScoreTimeSec] = useState(0);
@@ -29,7 +28,7 @@ export default function Game(props) {
     const [newWord, setNewWord] = useState(giveNewWord(difficultyFactorNew));
     const [seconds, setSeconds] = useState(Math.ceil(newWord.length / difficultyFactorNew));
     const [score, setScore] = useState(0.00);
-   // const [level, setLevel] = useState("");
+   
 
    function giveNewWord(difficultyFactorNew) {
 
@@ -64,7 +63,7 @@ export default function Game(props) {
           );
         } else if (userInput[i]) {
           return (
-            <span style={{ color: "blue" }} key={i}>
+            <span style={{ color: "red" }} key={i}>
               {ch}
             </span>
           );
@@ -95,9 +94,11 @@ export default function Game(props) {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     function toggle() {
-      // setScore(scoreTimeSec);
+      
       setIsActive(false);
-      score < 1 ? SetDataToLocal('score',score+0.01): SetDataToLocal('score',score+1.01);
+      // score < 1 ? SetDataToLocal('score',score+0.01): SetDataToLocal('score',score+1.01);
+      SetDataToLocal('score',score)
+      AddToLocalStorageArray('scoreList', score);
       window.location.href="/result";
     }
   
@@ -124,19 +125,23 @@ export default function Game(props) {
               setScoreTimeMSec(scoreTimeMSec => 0);
             }
             else{
-              // if(mSeconds > 0){
+               if(mSeconds > 0){
                 setMSeconds(mSeconds => mSeconds - 1);
-              // }
-              setScoreTimeMSec(scoreTimeMSec => scoreTimeMSec + 1);              
+               }
+              setScoreTimeMSec(scoreTimeMSec => scoreTimeMSec + 1); 
+              
+              setScore(scoreTimeSec + parseFloat(scoreTimeMSec/100));
+
             }            
-            scoreTimeSec > 0 ? setScore(scoreTimeSec + parseFloat(scoreTimeMSec/100)) : setScore(scoreTimeSec + parseFloat(scoreTimeMSec/100)); 
+  
+
           }
 
           
           
         }, 10);
 
-        if(seconds===0){
+        if(seconds===0 && mSeconds===1){
           
           toggle();
         }
@@ -151,11 +156,12 @@ export default function Game(props) {
     }, [isActive, seconds]);
 
 
+    
     return (
       <div className="container-fluid BackgroundStyle">
         <div className="row">
           <div className="col-sm-3">
-            <div className="headText">
+            <div className="headText pt-30">
               <img src={PersonIcon} alt=""/>
               <span className="pl-3">NAME: {GetDataFromLocal('playerName').toUpperCase()}</span>
             </div>
@@ -167,11 +173,12 @@ export default function Game(props) {
               <span className="score-board">
                 SCORE BOARD
               </span>
-              <div className="game-record-result">Game 1:  1:14</div>
+              
+              {/* <div className="game-record-result">Game 1:  1:14</div>
               <div className="game-record-result">Game 1:  1:14</div>
               <div className="game-record-result">Game 1:  1:14</div>
               <div className="personal-best">Personal Best</div>
-              <div className="game-record-result">Game 1:  1:14</div>
+              <div className="game-record-result">Game 1:  1:14</div> */}
               
   
             </div>
@@ -192,7 +199,6 @@ export default function Game(props) {
   
             </div>
             <div>
-              {/* <WordInput ref={ref}/> */}
               <input type="text" className="gameInputBox" id="wordInputVal" ref={wordInputRef} value={userinput} onChange={onUserInputChange}/>
   
             </div>
@@ -200,7 +206,7 @@ export default function Game(props) {
             
           </div>
           <div className="col-sm-3">
-              <div>
+              <div className="pt-30">
                 <span className="headText">fast fingers</span>
               </div>
               <div>

@@ -7,19 +7,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home(props) {
 
-  const [error, setError] = useState(0);
+  let error = false;
   const userNameRef = React.createRef();
   const [playerName, setPlayerName] = useState("");
   const [difficultyLevel, setDifficultyLevel] = useState(1);
   
   const startGame = (event) => {
     
-    event.preventDefault();
-    if(playerName.length === "0")
-    setError(error => 1);
-    console.log(error + "  " + playerName.length);
+    //event.preventDefault();
+    if(playerName.trim() === ""){
+
+      error = true;
+     
+    }
+    else
+      error = false;
+      
     if(error){
-      return; 
+      return true; 
     }
     else
     {
@@ -43,7 +48,7 @@ export default function Home(props) {
   },[]);
 
     const playerNameChangeHandler = (e) => {
-      //setError(false);
+      error = false;
       setPlayerName(e.target.value);
     }
 
@@ -68,8 +73,8 @@ export default function Home(props) {
             
            <form onSubmit="{startGame}">
                 
-                  <input type="text" placeholder="TYPE YOUR NAME" className="Rectangle-2 type-your-name" name="playerName" id="playerName" ref={userNameRef} value={playerName} onChange={playerNameChangeHandler}required/>
-                  {error ? <div><span className="text-danger float-left">Please enter your name in the box</span></div>: ''}
+                  <input type="text" placeholder="TYPE YOUR NAME" className="Rectangle-2 type-your-name" name="playerName" id="playerName" ref={userNameRef} value={playerName} onChange={playerNameChangeHandler} required/>
+                  {error ? <div span className="text-danger">Please enter your name in the box</div>: ''}
                 
                 <select name="difficultyLevel" id="level" className="Rectangle-5 difficulty-level" value={difficultyLevel} onChange={onDifficultyLevelChange}>
                   <option value="1">EASY</option>
@@ -81,7 +86,7 @@ export default function Home(props) {
                 <div className="pt-25">
                   <div className="button-design button" onClick={startGame}>
                     <img src={StartButton} alt="Start Button" className="center" />
-                    <span className="center">START GAME</span>
+                    <span className="center play-button">START GAME</span>
                   </div>
                 </div>
             </form>

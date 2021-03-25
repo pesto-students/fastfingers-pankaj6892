@@ -4,6 +4,9 @@
   opacity: 1;
   background-color:  black;
 }
+.pt-30{
+  padding-top: 20%;
+}
 .timer {
   width: 257.1px;
   height: 257.1px;  

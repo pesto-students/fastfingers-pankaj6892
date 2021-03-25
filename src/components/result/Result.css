@@ -1,6 +1,4 @@
 .score-game {
-  /* margin: 22px 12.2px 12.7px 48.3px; */
-  
   font-family: Gotham;
   font-size: 50px;
   font-weight: 500;
@@ -11,12 +9,23 @@
   text-align: center;
   color: white;
 }
+.score-text{
+  font-size: 70px;
+}
+
 .pt-30{
   padding-top: 20%;
 }
 
-.pt-90{
-  padding-top: 90%;
+.icon-open-reload {
+  width: 52.5px;
+  height: 52.6px;
+  margin: 4.7px 35.4px 49.7px 20.8px;
+  object-fit: contain;
+}
+
+.pt-450{
+  padding-top: 450px !important;
 }
 
 .backgroundStyle {
