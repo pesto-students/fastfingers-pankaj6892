@@ -14,26 +14,27 @@ export default function Game(props) {
     alert("This page is not directly accessible");
     window.location.href="/";
   }
-  let difficultyFactor = props.difficultyFactor;
+  
 
-    // eslint-disable-next-line
     const wordInputRef = React.createRef(); 
   
     const [userinput, setUserinput] = useState("");
-    const [newWord, setNewWord] = useState(giveNewWord());
-    const [seconds, setSeconds] = useState(3);
+    
+    
     const [mSeconds, setMSeconds] = useState(100);
     const [isActive, setIsActive] = useState(true);
     const [scoreTimeSec, setScoreTimeSec] = useState(0);
     const [scoreTimeMSec, setScoreTimeMSec] = useState(0);
     const [difficultyFactorNew, setDifficultyFactor] = useState(parseFloat(GetDataFromLocal('difficultyFactor')));
-    const [score, setScore] = useState(0);
+    const [newWord, setNewWord] = useState(giveNewWord(difficultyFactorNew));
+    const [seconds, setSeconds] = useState(Math.ceil(newWord.length / difficultyFactorNew));
+    const [score, setScore] = useState(0.00);
    // const [level, setLevel] = useState("");
 
    function giveNewWord(difficultyFactorNew) {
 
     const word = getRandomWordFromDictionary(parseFloat(difficultyFactorNew));
-    
+
     return word;
     
     }
@@ -82,57 +83,56 @@ export default function Game(props) {
       const { target: { value } = {} } = e;
       setUserinput(value);
       if (value === newWord) {
-        setDifficultyFactor(1.01 * difficultyFactorNew);
+
+        
+        setDifficultyFactor(difficultyFactorNew + 0.01);
   
         setNewWord(newWord => giveNewWord(difficultyFactorNew));
-        setSeconds(seconds => 3 - difficultyFactor);
+        setSeconds(Math.ceil(newWord.length / difficultyFactorNew));
   
         setUserinput("");
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     function toggle() {
-      
+      // setScore(scoreTimeSec);
       setIsActive(false);
-      setScore(scoreTimeSec);
-      SetDataToLocal('score',score);
+      score < 1 ? SetDataToLocal('score',score+0.01): SetDataToLocal('score',score+1.01);
       window.location.href="/result";
     }
   
-    // function reset() {
-    //   setSeconds(3);
-    //   setMSeconds(100);
-    //   setIsActive(true);
-
-    // }
 
     useEffect(() => {
 
       if(wordInputRef.current){
         wordInputRef.current.focus();
       }
-      let interval = null;
-      // let intervalMS = null;
+      let interval = 0;
       let i=0;
       if (isActive) {
         interval = setInterval(() => {
+          
           if(seconds>0){
+            
             i=i+1;
             if(i%100===0){
               setSeconds(seconds => seconds - 1);
               setScoreTimeSec(scoreTimeSec => scoreTimeSec + 1);
-              if(seconds>1){
-                setMSeconds(mSeconds => 100);
-                
-              }
+               if(seconds>1){
+                setMSeconds(mSeconds => 100);     
+               }
               setScoreTimeMSec(scoreTimeMSec => 0);
             }
             else{
-              setMSeconds(mSeconds => mSeconds - 1);
+              // if(mSeconds > 0){
+                setMSeconds(mSeconds => mSeconds - 1);
+              // }
               setScoreTimeMSec(scoreTimeMSec => scoreTimeMSec + 1);              
             }            
-            
+            scoreTimeSec > 0 ? setScore(scoreTimeSec + parseFloat(scoreTimeMSec/100)) : setScore(scoreTimeSec + parseFloat(scoreTimeMSec/100)); 
           }
+
+          
           
         }, 10);
 
@@ -176,14 +176,14 @@ export default function Game(props) {
   
             </div>
             <div>
-              <button className="headText button pt-60" ><b>X</b> STOP GAME</button>
+              <button className="headText button pt-60" onClick={toggle}><b>X</b> STOP GAME</button>
             </div>
             
           </div>
           <div className="col-sm-6">
             <div className="container pt-60">
               <img src={TimerControl} alt="Timer Control" />
-              <span className="centered">{seconds > 0 ? seconds-1: seconds}:{mSeconds}</span>
+              <span className="centered">{seconds > 0 ? seconds-1: seconds}:{mSeconds > 0 ? mSeconds : 0}</span>
   
             </div>
             <div className="gameText">

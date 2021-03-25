@@ -13,10 +13,10 @@ function App(page) {
         <Home />
       </Route>
       <Route path="/game">
-        <Game difficultyFactor="1" time="3"/>
+        <Game />
       </Route>
       <Route path="/result">
-        <Result score/>
+        <Result />
       </Route>
     </div>
   );
