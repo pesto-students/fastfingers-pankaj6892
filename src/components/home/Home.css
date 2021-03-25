@@ -1,0 +1,274 @@
+.BackgroundStyle {
+  width: 100%;
+  height: 100vh;
+  opacity: .8;
+  background-color:  rgb(102, 79, 79);
+  background-image: linear-gradient(180deg,#000000,rgba(0,0,0,.9)),url("../img/background-texture.svg");
+  
+}
+.Icon-awesome-keyboard {
+  min-width: 180px;
+  height: 100%;
+  padding-top: 20px;
+  object-fit: contain;
+  color: #ff5155;
+}
+
+.Rectangle-2 {
+  min-width: 60%;
+  min-height: 70px;
+  margin: 25px 0 0;
+  border-radius: 15px;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+  border: solid 1px #ffffff;  
+  opacity: 0.59;
+}
+
+.Rectangle-5 {
+  min-width: 60%;
+  min-height: 70px;
+  margin: 25px 0 0;
+  padding: 10px 10px 10px 10px;
+  border-radius: 15px;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+  border: solid 1px #ffffff;
+  background-color: transparent;
+}
+.Rectangle-6 {
+  width: 60%;
+  height: 149px;
+  margin: 8.6px 11px 0;
+  padding: 22px 17px 11.4px;
+  opacity: 0.59;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+  background-color: var(--white);
+}
+.difficulty-level:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.pt-25{
+  padding-top: 25px;
+}
+
+.button:hover{
+  color: #ffff;
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.line {
+  position: relative;
+  bottom: 50%;
+  /* border-bottom: 2px solid #ff5155; */
+  flex: 1 1;
+  
+}
+.line:after{
+  content: " ~~~~~~~~ ";
+  color: #ff5155;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+.play-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 29px;
+  color: var(--red);
+}
+
+
+
+/* .fast-fingers {
+  font-family: LaserCorpsGradient;
+  font-size: 81px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  
+  color: #ff5155;
+} */
+
+
+/* If the screen size is 751px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 751px) {
+  .fast-fingers {
+    font-family: LaserCorpsGradient;
+    font-size: 81px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    
+    color: #ff5155;
+  }
+
+  .the-ultimate-typing-game {
+    font-family: Gotham;
+    font-size: 26px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ff5155;
+  }
+
+  .type-your-name {
+    font-family: Breamcatcher;
+    font-size: 35px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    padding-left: 15px;
+    text-align: left;
+    color: #032228;
+  }
+  .difficulty-level {
+
+    /* margin: 0 216.7px 0 0; */
+    font-family: Breamcatcher;
+    font-size: 35px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #97a5a7;
+  }
+  .button {
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px;
+    margin-bottom: 4px;
+    padding-top: 45px;
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+    font-family: Gotham;
+    font-size: 38px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ff5155;
+    
+    border-radius: 10%;
+    
+  }
+
+  .line:after{
+    content: " ~~~~~~~~ ";
+    color: #ff5155;
+  }
+}
+
+
+
+
+
+/* If the screen size is 751px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 751px) {
+  .fast-fingers {
+    font-family: LaserCorpsGradient;
+    font-size: 56px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    
+    color: #ff5155;
+  }
+  .the-ultimate-typing-game {
+    font-family: Gotham;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ff5155;
+  }
+  .type-your-name {
+    font-family: Breamcatcher;
+    font-size: 26px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    padding-left: 15px;
+    text-align: left;
+    color: #032228;
+  }
+  .difficulty-level {
+
+    /* margin: 0 216.7px 0 0; */
+    font-family: Breamcatcher;
+    font-size: 26px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #97a5a7;
+  }
+  .button {
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin: 2px; */
+    margin-bottom: 4px;
+    padding-top: 29px;
+  
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+    font-family: Gotham;
+    font-size: 28px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ff5155;
+    
+    border-radius: 10%;
+
+  }
+  .line:after{
+    content: " ~~~~ ";
+    color: #ff5155;
+  }
+}
