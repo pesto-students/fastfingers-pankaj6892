@@ -7,7 +7,7 @@ import {GetDataFromLocal} from '../LocalStorage/SetLocalStorageData'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-export default function Game(props) {
+export default function Result(props) {
 
   if(GetDataFromLocal('playerName')===""){
     alert("This page is not directly accessible");
