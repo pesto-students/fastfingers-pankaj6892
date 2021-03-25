@@ -1,0 +1,211 @@
+.backgroundStyle {
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  background-color:  black;
+}
+.timer {
+  width: 257.1px;
+  height: 257.1px;  
+  padding:45.3px;
+  object-fit: contain;
+  position: relative;
+  text-align: center;
+  
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pt-60{
+  padding-top: 70px;
+}
+.gameText {
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+  font-family: Gotham;
+  font-size: 60px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
+}
+
+.gameInputBox {
+  width: 60%;
+  height: 70px;
+  margin: 45px 49.4px 30px 35.3px;
+  opacity: 0.59;
+  border-radius: 15px;
+  box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+  background-color: var(--white);
+  font-family: Breamcatcher;
+  font-size: 35px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--evergreen);
+}
+
+.gameInputText {
+  width: 10px;
+  height: 35px;
+  margin: 54px 0.1px 17.9px 7.8px;
+  font-family: Breamcatcher;
+  font-size: 35px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--evergreen);
+}
+
+.gameRecord {
+  width: 70%;
+  height: 393px;
+  margin: 40px 20.7px 3px 41.7px;
+  padding: 18px 16.5px 29.2px 16.5px;
+  border-radius: 15px;
+  border: solid 3px red;
+}
+
+.headText {
+  margin: 3px 0 0 22.3px;
+  font-family: Breamcatcher;
+  font-size: 26px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: red;
+}
+
+.clockManager{
+    position: absolute;
+    font-family: Gotham;
+    font-size: 57px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  line-height: 500px;
+  border-radius: 50%;
+  font-size: 50px;
+  color: rgb(218, 28, 28);
+  text-align: center;
+  background: rgb(163, 16, 16)
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Gotham;
+  font-size: 57px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+}
+.score-board {
+  font-family: Gotham;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: red;
+}
+
+.game-record-result {
+  margin: 5px 0px 3px 15px;
+  font-family: Gotham;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: white;
+}
+
+.personal-best { 
+  margin: 13px 17.7px 0.6px 15px;
+  font-family: Gotham;
+  font-size: 11px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: normal;
+  text-align: left;
+  color: red;
+}
+
+.icon-metro-cross {
+  width: 43.1px;
+  height: 43.1px;
+  margin: 0 17.3px 6.3px 0;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
+  background-color: red;
+}
+
+.button {
+  height: 70px;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px;
+  margin-bottom: 4px;
+  padding-top: 45px;
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+  font-family: Gotham;
+  font-size: 38px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff5155;
+  
+  border-radius: 10%;
+}
+
+.button:hover{
+  color: #ffff;
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.1);
+}
