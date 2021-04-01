@@ -91,7 +91,7 @@ const Timer = (props) => {
   return (
     <div className="App-Timer">
       <div className="timer_count" style={{
-        width: TIMER_DIMENSION+'px',
+        width: "100%",
         height: TIMER_DIMENSION+'px'
       }}>
         <span className="timer_count-text">{formatTimeInSec(timeLeft)}</span>

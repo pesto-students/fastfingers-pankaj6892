@@ -241,8 +241,8 @@ const Game = (props) => {
         state.gameState === GAME_STATES.SUCCESS &&
         <WorkingArea main = {
           <>
-            <div>
-              {state.successText}
+            <div class="pt-50">
+              <h1 className="text-success">{state.successText}</h1>
             </div>
           </>
 

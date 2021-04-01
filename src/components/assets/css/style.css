@@ -625,6 +625,12 @@
   transform: scale(1.1);
 }
 
+.pt-50{
+
+  padding-top: 50px;
+
+}
+
 input {text-transform: uppercase;}
 
 
