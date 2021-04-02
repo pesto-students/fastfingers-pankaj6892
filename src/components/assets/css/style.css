@@ -138,7 +138,7 @@
   margin-bottom: 4px;
   padding-top: 45px;
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  font-family: Gotham;
+  
   font-size: 38px;
   font-weight: 500;
   font-stretch: normal;
@@ -152,7 +152,8 @@
 }
 
 .fast-fingers {
-  font-size: 60px;
+  font-size: 120px;
+  font-family: Robus;
   color: var(--red);
 }
 
@@ -187,7 +188,7 @@
 }
 .gameText {
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  font-family: Gotham;
+  
   font-size: 60px;
   font-weight: 500;
   font-stretch: normal;
@@ -206,7 +207,7 @@
   border-radius: 15px;
   box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
   background-color: var(--white);
-  font-family: Breamcatcher;
+  
   font-size: 35px;
   font-weight: normal;
   font-stretch: normal;
@@ -221,7 +222,7 @@
   width: 10px;
   height: 35px;
   margin: 54px 0.1px 17.9px 7.8px;
-  font-family: Breamcatcher;
+  
   font-size: 35px;
   font-weight: normal;
   font-stretch: normal;
@@ -243,7 +244,7 @@
 
 .headText {
   margin: 3px 0 0 22.3px;
-  font-family: Breamcatcher;
+  
   font-size: 26px;
   font-weight: normal;
   font-stretch: normal;
@@ -256,7 +257,7 @@
 
 .clockManager{
     position: absolute;
-    font-family: Gotham;
+    
     font-size: 57px;
     font-weight: 500;
     font-stretch: normal;
@@ -287,7 +288,7 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: Gotham;
+  
   font-size: 57px;
   font-weight: 500;
   font-stretch: normal;
@@ -296,7 +297,7 @@
   letter-spacing: normal;
 }
 .score-board {
-  font-family: Gotham;
+  
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -309,7 +310,7 @@
 
 .game-record-result {
   margin: 5px 0px 3px 15px;
-  font-family: Gotham;
+  
   font-size: 22px;
   font-weight: normal;
   font-stretch: normal;
@@ -322,7 +323,7 @@
 
 .personal-best { 
   margin: 13px 17.7px 0.6px 15px;
-  font-family: Gotham;
+  
   font-size: 11px;
   font-weight: normal;
   font-stretch: normal;
@@ -353,7 +354,7 @@
   margin-bottom: 4px;
   padding-top: 45px;
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  font-family: Gotham;
+  
   font-size: 38px;
   font-weight: 500;
   font-stretch: normal;
@@ -384,7 +385,7 @@
 
 /* Result Page CSS */
 .score-game {
-  font-family: Gotham;
+  
   font-size: 50px;
   font-weight: 500;
   font-stretch: normal;
@@ -439,7 +440,7 @@
 }
 .gameText {
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  font-family: Gotham;
+  
   font-size: 60px;
   font-weight: 500;
   font-stretch: normal;
@@ -458,7 +459,7 @@
   border-radius: 15px;
   box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
   background-color: var(--white);
-  font-family: Breamcatcher;
+  
   font-size: 35px;
   font-weight: normal;
   font-stretch: normal;
@@ -473,7 +474,7 @@
   width: 10px;
   height: 35px;
   margin: 54px 0.1px 17.9px 7.8px;
-  font-family: Breamcatcher;
+  
   font-size: 35px;
   font-weight: normal;
   font-stretch: normal;
@@ -495,7 +496,7 @@
 
 .headText {
   margin: 3px 0 0 22.3px;
-  font-family: Breamcatcher;
+  
   font-size: 26px;
   font-weight: normal;
   font-stretch: normal;
@@ -508,7 +509,7 @@
 
 .clockManager{
     position: absolute;
-    font-family: Gotham;
+    
     font-size: 57px;
     font-weight: 500;
     font-stretch: normal;
@@ -539,7 +540,7 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: Gotham;
+  
   font-size: 57px;
   font-weight: 500;
   font-stretch: normal;
@@ -548,7 +549,7 @@
   letter-spacing: normal;
 }
 .score-board {
-  font-family: Gotham;
+  
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -561,7 +562,7 @@
 
 .game-record-result {
   margin: 5px 0px 3px 15px;
-  font-family: Gotham;
+  
   font-size: 22px;
   font-weight: normal;
   font-stretch: normal;
@@ -574,7 +575,7 @@
 
 .personal-best { 
   margin: 13px 17.7px 0.6px 15px;
-  font-family: Gotham;
+  
   font-size: 11px;
   font-weight: normal;
   font-stretch: normal;
@@ -605,7 +606,7 @@
   margin-bottom: 4px;
   padding-top: 45px;
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  font-family: Gotham;
+  
   font-size: 38px;
   font-weight: 500;
   font-stretch: normal;
@@ -632,6 +633,32 @@
 }
 
 input {text-transform: uppercase;}
+
+@font-face {
+  font-family: Evil;
+  src: url('./robus-font/EvilEmpire-4BBVK.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: Evil;
+  font-weight: bold;
+  src: url("./robus-font/EvilEmpire-4BBVK.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: Robus;
+  src: url('./robus-font/Robus-BWqOd.otf') format("opentype");
+}
+
+@font-face {
+  font-family: Robus;
+  font-weight: bold;
+  src: url("./robus-font/Robus-BWqOd.otf") format("opentype");
+}
+
+body {
+  font-family: Evil;
+}
 
 
 

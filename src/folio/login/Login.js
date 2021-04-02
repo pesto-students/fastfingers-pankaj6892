@@ -81,7 +81,7 @@ const Login = (props) => {
     
     <WorkingArea main={
     <>
-      <img src={IconAwesomeKeyboard} alt="Fast Fuber"/>
+      <img src={IconAwesomeKeyboard} alt="fast fingers"/>
       <div>
         <span className="fast-fingers">fast fingers</span>
       </div>

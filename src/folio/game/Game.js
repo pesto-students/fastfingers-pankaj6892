@@ -253,7 +253,7 @@ const Game = (props) => {
 
         <div className="col-sm-3">
               <div className="pt-30">
-                <img src={IconAwesomeKeyboard} alt="" width="10%"/>
+                <img src={IconAwesomeKeyboard} alt="fast fingers" width="10%"/>
                 <span className="headText">fast fingers</span>
               </div>
               <div>
