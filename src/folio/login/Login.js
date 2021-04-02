@@ -90,7 +90,7 @@ const Login = (props) => {
         <span className="line"></span><span className="the-ultimate-typing-game">the ultimate typing game</span><span className="line"></span>
       </div>
     
-      <form onSubmit="{startGame}">
+      <form>
                 
           <input type="text" placeholder="TYPE YOUR NAME" className="Rectangle-2 type-your-name" name="playerName" id="playerName" ref={userNameRef} value={playerName} onChange={playerNameChangeHandler} required/>
           {

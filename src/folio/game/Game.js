@@ -202,7 +202,18 @@ const Game = (props) => {
             </span>
             {
                 finalScoreList.map((value, index) => {
-                return <div className="game-record-result">Game {index}: {" " + parseInt(value / 60)}:{parseInt(value % 60)}</div>
+                if(Math.max(...finalScoreList) === parseInt(value))
+                return(
+                <div>
+                  <div className="personal-best">Personal Best</div>
+                  <div className="game-record-result">Game {index}: {" " + parseInt(value / 60)}:{parseInt(value % 60)}</div>
+                </div>
+                )
+                else{
+                  return(
+                    <div className="game-record-result">Game {index}: {" " + parseInt(value / 60)}:{parseInt(value % 60)}</div>
+                  )
+                } 
                 })
             }
 
