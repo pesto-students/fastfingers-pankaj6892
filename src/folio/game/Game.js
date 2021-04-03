@@ -19,6 +19,13 @@ const SUCCESS_TEXT = ['Wow! Awesome Work', 'Nice One!', 'Well Done!', 'Suprb!', 
 
 const Game = (props) => { 
 
+  const [state, setState] = useState({
+    word: '',
+    typedWord: '',
+    gameState: GAME_STATES.READY,
+    successText: ''
+  })
+
   const [userinput, setUserinput] = useState("");
   const [difficultyFactorNew, setDifficultyFactor] = useState(parseFloat(GetDataFromLocal('difficultyFactor')));
 
@@ -49,9 +56,7 @@ const Game = (props) => {
       wordInputRef.current.focus();
     }  
 
-    setTimeout(() => {
-      giveNewWord();
-    }, 1000);
+    giveNewWord();
 
     startResultCalculation();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -68,12 +73,7 @@ const Game = (props) => {
 
 
 
-  const [state, setState] = useState({
-    word: '',
-    typedWord: '',
-    gameState: GAME_STATES.READY,
-    successText: ''
-  })
+  
 
   function giveNewWord() {
     const word = getRandomWordFromDictionary(parseFloat(difficultyFactorNew));
@@ -241,9 +241,7 @@ const Game = (props) => {
                 <input type="text" className="gameInputBox" id="wordInputVal" ref={wordInputRef} value={userinput} onChange={onUserInputChange} autoFocus/>
               </div>
             </>
-          </div>
-            
-        
+          </div>  
       }
       
       
