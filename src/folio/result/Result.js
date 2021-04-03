@@ -85,7 +85,7 @@ export default function Result(props) {
           </div>
           <div className="col-sm-3">
               <div>
-                <div className="headText pt-30"><strong>fast fingers</strong></div>
+                <div className="brandText pt-30"><strong>fast fingers</strong></div>
               </div>
               
           </div>

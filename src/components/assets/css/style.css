@@ -242,6 +242,19 @@
   border: solid 3px red;
 }
 
+.brandText {
+  margin: 3px 0 0 22.3px;
+  font-family: Robus;
+  font-size: 75px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--red);
+}
+
 .headText {
   margin: 3px 0 0 22.3px;
   

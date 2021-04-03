@@ -253,8 +253,7 @@ const Game = (props) => {
 
         <div className="col-sm-3">
               <div className="pt-30">
-                <img src={IconAwesomeKeyboard} alt="fast fingers" width="10%"/>
-                <span className="headText">fast fingers</span>
+                <span className="brandText">fast fingers</span>
               </div>
               <div>
           <span className="headText">SCORE:  {parseInt(seconds/60)}:{seconds%60}</span>
