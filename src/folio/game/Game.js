@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import WorkingArea from '../../components/WorkingArea/WorkingArea';
-import IconAwesomeKeyboard from '../../components/assets/img/Icon-awesome-keyboard.svg';
 import Timer from '../../components/Timer/Timer';
 import TargetWord, {getRandomWordFromDictionary} from '../../components/GameControl/GameControl';
 import {GetDataFromLocal, SetDataToLocal, AddToLocalStorageArray} from '../../components/LocalStorage/SetLocalStorageData';
