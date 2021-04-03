@@ -30,8 +30,6 @@ const Login = (props) => {
   })
 
   const startGame = (event) => {
-    
-    event.preventDefault();
     if(playerName.trim() === ""){
 
       setState({
@@ -76,6 +74,12 @@ const Login = (props) => {
     ) 
    }
 
+   const handleKeypress = e => {
+      if (e.charCode === 13) {
+        startGame();
+      }
+    };
+
   return (
     <div>  
     
@@ -90,9 +94,9 @@ const Login = (props) => {
         <span className="line"></span><span className="the-ultimate-typing-game">the ultimate typing game</span><span className="line"></span>
       </div>
     
-      <form>
+      <div>
                 
-          <input type="text" placeholder="TYPE YOUR NAME" className="Rectangle-2 type-your-name" name="playerName" id="playerName" ref={userNameRef} value={playerName} onChange={playerNameChangeHandler} required/>
+          <input type="text" placeholder="TYPE YOUR NAME" className="Rectangle-2 type-your-name" name="playerName" id="playerName" ref={userNameRef} value={playerName} onChange={playerNameChangeHandler} onKeyPress={handleKeypress} required/>
           {
             state.loginState === LOGIN_STATES.ERROR &&
             <div span className="text-danger pr-13">Please enter your name in the box</div>
@@ -113,7 +117,7 @@ const Login = (props) => {
               <span className="center play-button">START GAME</span>
             </div>
           </div>
-        </form>
+        </div>
       
 
     </>} />

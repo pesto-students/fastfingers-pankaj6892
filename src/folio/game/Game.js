@@ -42,15 +42,6 @@ const Game = (props) => {
   }
   
   
-  // const [highestScoreFlag, setHighestScoreGlag] = useState(Math.max(...finalScoreList) <= props.score ? "Highest Score!" :  "You can do better!");
-
-  // const [time, setTime] = useState(0);
-
-  
-
-  
-
-
   useEffect(() => {
     if (wordInputRef.current) {
       wordInputRef.current.focus();
@@ -238,7 +229,7 @@ const Game = (props) => {
                 <TargetWord targetWord={state.word.toUpperCase()} userInput={userinput}></TargetWord>
               </div>
               <div>      
-                <input type="text" className="gameInputBox" id="wordInputVal" ref={wordInputRef} value={userinput} onChange={onUserInputChange} autoFocus/>
+                <input type="text" className="gameInputBox" id="wordInputVal" ref={wordInputRef} value={userinput} onChange={onUserInputChange} autoComplete="off" autoFocus/>
               </div>
             </>
           </div>  
