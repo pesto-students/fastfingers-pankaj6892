@@ -57,7 +57,7 @@ export default function Result(props) {
 
   return (
     <div className="container-fluid BackgroundStyle">
-        <div className="row">
+        <div className="row gameLayout">
           <div className="col-md-3">
             <div className="headText pt-30">
               <img src={PersonIcon} alt=""/>
@@ -76,7 +76,7 @@ export default function Result(props) {
           <div className="col-md-6 position-relative pt-30">
             
               <div className="score-game">SCORE: GAME {" " + parseInt(finalScoreList.length)}</div>
-              <div className="score-game score-text">Your score is {" " + parseInt(props.score / 60)}:{" " + parseInt(props.score % 60)}</div>
+              <div className="score-game score-text">Your score is <br /> {" " + parseInt(props.score / 60)}:{" " + parseInt(props.score % 60)}</div>
               
               <div><h2 className="text-success">{highestScoreFlag}</h2></div>
 

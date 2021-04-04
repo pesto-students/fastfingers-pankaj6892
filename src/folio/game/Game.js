@@ -175,8 +175,8 @@ const Game = (props) => {
   return (
   <div>
    
-    <div className="row">
-      <div className="col-md-3">
+    <div className="row gameLayout">
+      <div className="col-md-3 .d-none.d-sm-block">
         <>
           <div className="headText pt-30">
               <img src={PersonIcon} alt=""/>
@@ -217,11 +217,11 @@ const Game = (props) => {
         </>
        
       </div>
-      
+      <div className="col-md-6 pt-50 mh-600">
       {
         state.gameState === GAME_STATES.PLAY &&
         
-          <div className="col-md-6 pt-25">
+          
             <>
               <Timer onComplete={onTimerComplete} timeInSec={state.word.length / 1} />
               <div className="gameText">
@@ -231,7 +231,7 @@ const Game = (props) => {
                 <input type="text" className="gameInputBox" id="wordInputVal" ref={wordInputRef} value={userinput} onChange={onUserInputChange} autoComplete="off" autoFocus/>
               </div>
             </>
-          </div>  
+            
       }
       
       
@@ -240,13 +240,15 @@ const Game = (props) => {
         state.gameState === GAME_STATES.SUCCESS &&
         <WorkingArea main = {
           <>
-            <div class="pt-50">
+            
               <h1 className="text-success">{state.successText}</h1>
-            </div>
+            
           </>
 
         } />
       }
+
+      </div>
 
 
 
