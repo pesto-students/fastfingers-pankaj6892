@@ -176,7 +176,7 @@ const Game = (props) => {
   <div>
    
     <div className="row">
-      <div className="col-sm-3">
+      <div className="col-md-3">
         <>
           <div className="headText pt-30">
               <img src={PersonIcon} alt=""/>
@@ -221,7 +221,7 @@ const Game = (props) => {
       {
         state.gameState === GAME_STATES.PLAY &&
         
-          <div className="col-sm-6 pt-25">
+          <div className="col-md-6 pt-25">
             <>
               <Timer onComplete={onTimerComplete} timeInSec={state.word.length / 1} />
               <div className="gameText">
@@ -250,7 +250,7 @@ const Game = (props) => {
 
 
 
-        <div className="col-sm-3">
+        <div className="col-md-3">
               <div className="pt-30">
                 <span className="brandText">fast fingers</span>
               </div>

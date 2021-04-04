@@ -58,7 +58,7 @@ export default function Result(props) {
   return (
     <div className="container-fluid BackgroundStyle">
         <div className="row">
-          <div className="col-sm-3">
+          <div className="col-md-3">
             <div className="headText pt-30">
               <img src={PersonIcon} alt=""/>
               <span className="pl-3">NAME: {GetDataFromLocal('playerName').toUpperCase()}</span>
@@ -73,7 +73,7 @@ export default function Result(props) {
             </div>
             
           </div>
-          <div className="col-sm-6 position-relative pt-30">
+          <div className="col-md-6 position-relative pt-30">
             
               <div className="score-game">SCORE: GAME {" " + parseInt(finalScoreList.length)}</div>
               <div className="score-game score-text">Your score is {" " + parseInt(props.score / 60)}:{" " + parseInt(props.score % 60)}</div>
@@ -83,7 +83,7 @@ export default function Result(props) {
               <div className="button" onClick={startGame}><img src={IconOpenReload} alt=">>" width="40px"/> PLAY AGAIN</div>
         
           </div>
-          <div className="col-sm-3">
+          <div className="col-md-3">
               <div>
                 <div className="brandText pt-30"><strong>fast fingers</strong></div>
               </div>
