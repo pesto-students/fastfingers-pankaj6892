@@ -1,0 +1,30 @@
+.top-pane {
+  width: 100%;
+  min-height: 20%;
+  padding-top: 20%;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+.middle-pane {
+  width: 100%;
+  min-height: 60%;
+  padding-top: 60%;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+.bottom-pane {
+  width: 100%;
+  min-height: 20%;
+  padding-top:20%;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+.BackgroundStyle {
+  width: 100%;
+  height: auto;
+  opacity: .8;
+  background-color:  rgb(102, 79, 79);
+  background-image: linear-gradient(180deg,#000000,rgba(0,0,0,.9)),url("/img/background-texture.svg");
+  background-repeat: repeat;
+}
